@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% block contenido %}
+<body>
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+
+<br>
+<div>
+<center><h2>Listar Articulos</h2></center>
+</div>
+<table class="table">
+<thead class="thead-inverse">
+    <tr>
+      <th>Nombre</th>
+      <th>Tipo</th>
+      <th>Descripsion</th>
+    </tr>
+</thead>
+	
+{% for art in object_list %}
+
+<tr>
+<td> {{ art.nombre }} </td>
+<td> {{ art.tipo }} </td>
+<td> {{ art.descripsion }} </td>
+
+</tr>
+
+{% endfor %}
+
+</table>
+</body>
+{% endblock %}
